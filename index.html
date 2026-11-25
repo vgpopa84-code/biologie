@@ -103,6 +103,26 @@ tr:last-child td{border-bottom:0}
 @media (max-width:720px){.qgrid{grid-template-columns:1fr}.fig{position:static;order:-1;max-width:420px}.fig img{max-height:220px;object-fit:contain}}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.track i{transition:none}}
+
+/* telefon + tabletă */
+button,label,.opt,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (hover:none){.opt:hover{background:none}}
+.opt:has(input:checked){border-color:var(--acc)}
+@media (pointer:coarse){.dots{gap:8px}.dots button{width:44px;min-height:44px;font-size:14px}}
+@media (max-width:600px){.tbl{overflow:visible}.tbl table{min-width:0}.tbl tr:first-child{display:none}.tbl tr{display:block;padding:10px 12px;border-top:1px solid var(--line)}.tbl tr:nth-child(2){border-top:0}.tbl td{display:block;border:0;padding:2px 0}.tbl td:first-child{font-weight:600;padding-bottom:4px}.tbl td[data-l]:not(:first-child)::before{content:attr(data-l) ": ";color:var(--mute);font-weight:600}}
+
+/* animații Fișa Celula */
+.anim{margin:14px 0 20px;background:#071219;border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.anim canvas{display:block;width:100%;aspect-ratio:16/10;height:auto;background:#071219}
+.anim .actl{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#0c1a22}
+.anim .actl button{width:44px;height:44px;min-height:44px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;flex:none;cursor:pointer}
+.anim .actl button:focus-visible{outline:3px solid #e59ad0;outline-offset:2px}
+.anim .abar{flex:1;height:30px;cursor:pointer;background:linear-gradient(rgba(255,255,255,.2),rgba(255,255,255,.2)) center/100% 6px no-repeat;border-radius:6px}
+.anim .abar i{display:block;height:6px;margin-top:12px;background:#e59ad0;border-radius:6px;width:0}
+.anim figcaption{padding:12px 16px 14px;color:#e8efe4;font-size:15.5px;line-height:1.5}
+.anim .acap{display:block;min-height:4.5em}
+.anim small{display:block;color:#93a7a3;font-size:13px;margin-top:6px}
 </style>
 <div class="wrap">
  <h1>Salut, Bogdan! Hai la grile.</h1>
@@ -168,6 +188,7 @@ tr:last-child td{border-bottom:0}
    <li><b>Proteine periferice</b>: enzime, remodelare celulară la diviziune, contracții.</li>
    <li>Glicolipidele și glicoproteinele de la <b>exterior</b> sunt receptori pentru hormoni.</li>
   </ul>
+  <figure class="anim" data-a="memb"><canvas role="img" aria-label="Animație: membrana plasmatică, mozaic fluid"></canvas><div class="actl"><button class="pp" type="button"></button><button class="rs" type="button" aria-label="De la început"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="abar" aria-hidden="true"><i></i></div></div><figcaption><span class="acap" aria-live="polite"></span><small>Animație schematică, adăugată pentru înțelegere; urmează descrierea din material.</small></figcaption></figure>
   <div class="box tr"><b class="k">Atenție, materialele se contrazic</b>Fișa spune că membrana are colesterol „în cantitate mare”, dar cheia culegerii (întrebarea 104 E) cere „mici”. Lămurește cu profesorul.</div>
 
   <h2>3. Transportul prin membrană</h2>
@@ -179,6 +200,7 @@ tr:last-child td{border-bottom:0}
   <tr><td>Endocitoză</td><td>din afară înăuntru</td><td>—</td><td>fagocitoză (solide: macrofage, globule albe), pinocitoză (lichide)</td></tr>
   <tr><td>Exocitoză</td><td>dinăuntru în afară</td><td>—</td><td>hormoni (gl. endocrine), neurotransmițători, mucus</td></tr></table></div>
   <p class="hint">Rata difuziunii facilitate și a transportului activ e limitată de numărul proteinelor transportoare.</p>
+  <figure class="anim" data-a="dif"><canvas role="img" aria-label="Animație: difuziune și difuziune facilitată"></canvas><div class="actl"><button class="pp" type="button"></button><button class="rs" type="button" aria-label="De la început"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="abar" aria-hidden="true"><i></i></div></div><figcaption><span class="acap" aria-live="polite"></span><small>Animație schematică, adăugată pentru înțelegere; urmează descrierea din material.</small></figcaption></figure>
   <h3>Osmoza în 3 soluții (citoplasma are 1% sare)</h3>
   <div class="osm">
    <div><svg width="70" height="50" viewBox="0 0 70 50" aria-hidden="true"><ellipse cx="35" cy="25" rx="24" ry="17" fill="none" stroke="currentColor" stroke-width="2"/></svg><b>Izotonă, 1%</b>celula rămâne normală, nu are loc osmoza.</div>
@@ -187,6 +209,12 @@ tr:last-child td{border-bottom:0}
   </div>
   <div class="box mn"><b class="k">Mnemotehnică (adaos)</b>Apa „fuge spre sare”. HIPER = prea multă sare afară → apa pleacă → celula se zbârcește. HIPO = puțină sare afară → apa intră → celula se umflă.</div>
 
+  <h3>Osmoza animată</h3>
+  <figure class="anim" data-a="osm"><canvas role="img" aria-label="Animație: hematia în soluție izotonă, hipertonă și hipotonă"></canvas><div class="actl"><button class="pp" type="button"></button><button class="rs" type="button" aria-label="De la început"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="abar" aria-hidden="true"><i></i></div></div><figcaption><span class="acap" aria-live="polite"></span><small>Animație schematică, adăugată pentru înțelegere; urmează descrierea din material.</small></figcaption></figure>
+  <h3>Transport activ: pompa Na–K</h3>
+  <figure class="anim" data-a="pump"><canvas role="img" aria-label="Animație: pompa de sodiu și potasiu"></canvas><div class="actl"><button class="pp" type="button"></button><button class="rs" type="button" aria-label="De la început"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="abar" aria-hidden="true"><i></i></div></div><figcaption><span class="acap" aria-live="polite"></span><small>Animație schematică, adăugată pentru înțelegere; urmează descrierea din material.</small></figcaption></figure>
+  <h3>Endocitoză și exocitoză</h3>
+  <figure class="anim" data-a="vez"><canvas role="img" aria-label="Animație: fagocitoză și exocitoză"></canvas><div class="actl"><button class="pp" type="button"></button><button class="rs" type="button" aria-label="De la început"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="abar" aria-hidden="true"><i></i></div></div><figcaption><span class="acap" aria-live="polite"></span><small>Animație schematică, adăugată pentru înțelegere; urmează descrierea din material.</small></figcaption></figure>
   <h2>4. Citoplasma și organitele</h2>
   <p>Citoplasma e semilichidă; aici au loc metabolismul și sinteza proteinelor. <b>Citoscheletul</b> e o rețea interconectată de filamente <b>proteice</b> (microtubuli, microfilamente, filamente intermediare) pentru suport și deplasarea particulelor.</p>
   <div class="tbl"><table><tr><th>Organit</th><th>Cum arată</th><th>Rol</th></tr>
@@ -199,6 +227,7 @@ tr:last-child td{border-bottom:0}
   <tr><td>Centrozom</td><td>nonmembranos, 2 centrioli în formă de tijă</td><td>distribuie cromozomii la diviziune, inițiază formarea cililor</td></tr>
   <tr><td>Cili / flageli</td><td>ca firele de păr, pe corpusculi bazali</td><td>cilii (scurți, mulți) mută mucusul în căile respiratorii; flagelul (lung) mișcă spermatozoidul</td></tr>
   <tr><td>Vezicule</td><td>saci membranoși</td><td>conțin substanțe transportate în celulă</td></tr></table></div>
+  <figure class="anim" data-a="cil"><canvas role="img" aria-label="Animație: cili și flagel"></canvas><div class="actl"><button class="pp" type="button"></button><button class="rs" type="button" aria-label="De la început"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="abar" aria-hidden="true"><i></i></div></div><figcaption><span class="acap" aria-live="polite"></span><small>Animație schematică, adăugată pentru înțelegere; urmează descrierea din material.</small></figcaption></figure>
   <div class="box mn"><b class="k">Mnemotehnică (adaos)</b>RE <b>R</b>ugos = <b>R</b>ibozomi = p<b>R</b>oteine. RE neted = lipide și calciu. <b>Liz</b>ozom = <b>liz</b>ă, „stomacul” celulei. Mitocondria = „centrala electrică” (în material: generatorul celulei).</div>
 
   <h2>5. Nucleul</h2>
@@ -208,6 +237,7 @@ tr:last-child td{border-bottom:0}
    <li><b>Genele</b> sunt secvențele funcționale ale cromozomilor; în nucleu sunt aproximativ <b>30.000</b> de gene.</li>
    <li><b>Nucleolul</b>: unul sau doi, fără membrană, din proteine + <b>ARN</b>; produce subunitățile <b>ribozomilor</b>.</li>
   </ul>
+  <figure class="anim" data-a="crom"><canvas role="img" aria-label="Animație: ADN, nucleozomi, cromozom"></canvas><div class="actl"><button class="pp" type="button"></button><button class="rs" type="button" aria-label="De la început"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="abar" aria-hidden="true"><i></i></div></div><figcaption><span class="acap" aria-live="polite"></span><small>Animație schematică, adăugată pentru înțelegere; urmează descrierea din material.</small></figcaption></figure>
   <div class="box mn"><b class="k">Schemă</b>ADN + histone → nucleozom → (mai mulți) → cromozom → gene = segmentele funcționale.</div>
 
   <h2>Greșeli frecvente din cheie</h2>
@@ -367,4 +397,330 @@ renderStats();
 }
 </script>
 
-</body></html>
+<script>{for(const tb of document.querySelectorAll('.tbl table')){const h=[...tb.rows[0].cells].map(c=>c.textContent.trim());for(const r of [...tb.rows].slice(1))[...r.cells].forEach((c,k)=>{if(h[k])c.dataset.l=h[k];});}}</script><script>{
+/* Animații schematice pentru Fișa Celula: canvas 640×400 logic, randat la rezoluția ecranului (HiDPI). */
+if(!CanvasRenderingContext2D.prototype.roundRect)CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){r=Math.min(r,w/2,h/2);this.moveTo(x+r,y);this.arcTo(x+w,y,x+w,y+h,r);this.arcTo(x+w,y+h,x,y+h,r);this.arcTo(x,y+h,x,y,r);this.arcTo(x,y,x+w,y,r);this.closePath();};
+const CW=640,CH=400,TAU=Math.PI*2;
+let SC=1;
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>x<.5?2*x*x:1-((-2*x+2)**2)/2;
+const seg=(t,a,b)=>ease(cl((t-a)/(b-a)));
+const lerp=(a,b,k)=>a+(b-a)*k;
+function rng(seed){let s=seed%2147483647||7;return()=>{s=(s*16807)%2147483647;return(s-1)/2147483646;};}
+function pts(n,seed,x0,x1,y0,y1){const r=rng(seed);return Array.from({length:n},()=>({x:lerp(x0,x1,r()),y:lerp(y0,y1,r()),p:r()*TAU}));}
+
+function lbl(c,txt,x,y,o={}){
+  const fs=Math.max(o.size||20,13/SC);
+  c.font=`600 ${fs}px Inter,system-ui,-apple-system,sans-serif`;
+  c.textAlign=o.align||'left';c.textBaseline='middle';c.lineJoin='round';
+  c.lineWidth=fs*.32;c.strokeStyle='rgba(5,12,18,.9)';c.strokeText(txt,x,y);
+  c.fillStyle=o.col||'#f2f6ec';c.fillText(txt,x,y);
+}
+function stage(c,tint){
+  const g=c.createRadialGradient(CW*.5,CH*.42,40,CW*.5,CH*.5,CW*.75);
+  g.addColorStop(0,'#16303b');g.addColorStop(1,'#071219');
+  c.fillStyle=g;c.fillRect(0,0,CW,CH);
+  if(tint){c.fillStyle=tint;c.fillRect(0,0,CW,CH);}
+}
+function ball(c,x,y,r,c1,c2,a=1){
+  c.globalAlpha=a;const g=c.createRadialGradient(x-r*.35,y-r*.4,r*.1,x,y,r);
+  g.addColorStop(0,c1);g.addColorStop(1,c2);c.fillStyle=g;c.beginPath();c.arc(x,y,r,0,TAU);c.fill();c.globalAlpha=1;
+}
+/* fosfolipid: cap la (x,y), cozi spre +y în sistemul rotit */
+function lipid(c,x,y,rot,t,i,aH=1,aT=1){
+  c.save();c.translate(x,y);c.rotate(rot);
+  c.globalAlpha=aT;c.strokeStyle='#e8d7a2';c.lineWidth=2.2;c.lineCap='round';
+  for(const dx of[-3.6,3.6]){c.beginPath();c.moveTo(dx,0);for(let k=1;k<=6;k++)c.lineTo(dx+Math.sin(t*3+i*.9+k*1.3+dx)*1.7,k*5.4);c.stroke();}
+  c.restore();
+  ball(c,x,y,9,'#ffe0e8','#d9536f',aH);
+}
+function memH(c,y0,gap,t,skip,aH,aT){
+  for(let i=0,x=12;x<CW;i++,x+=22){
+    const w=Math.sin(t*1.7+i*.8)*1.6;if(skip&&skip(x))continue;
+    lipid(c,x+w,y0,0,t,i,aH,aT);lipid(c,x-w,y0+gap,Math.PI,t,i+40,aH,aT);
+  }
+}
+function memV(c,x0,gap,t,skip,y0=62){
+  for(let i=0,y=y0;y<CH;i++,y+=22){
+    const w=Math.sin(t*1.7+i*.8)*1.6;if(skip&&skip(y))continue;
+    lipid(c,x0,y+w,-Math.PI/2,t,i);lipid(c,x0+gap,y-w,Math.PI/2,t,i+40);
+  }
+}
+function blob(c,x,y,rx,ry,c1,c2,a=1){
+  c.globalAlpha=a;const g=c.createLinearGradient(x-rx,y-ry,x+rx,y+ry);
+  g.addColorStop(0,c1);g.addColorStop(1,c2);c.fillStyle=g;c.beginPath();c.ellipse(x,y,rx,ry,0,0,TAU);c.fill();
+  c.strokeStyle='rgba(255,255,255,.25)';c.lineWidth=1.5;c.stroke();c.globalAlpha=1;
+}
+function arrow(c,x1,y1,x2,y2,col,w=3){
+  const a=Math.atan2(y2-y1,x2-x1);c.strokeStyle=col;c.fillStyle=col;c.lineWidth=w;c.lineCap='round';
+  c.beginPath();c.moveTo(x1,y1);c.lineTo(x2-Math.cos(a)*8,y2-Math.sin(a)*8);c.stroke();
+  c.beginPath();c.moveTo(x2,y2);c.lineTo(x2-Math.cos(a-.45)*13,y2-Math.sin(a-.45)*13);c.lineTo(x2-Math.cos(a+.45)*13,y2-Math.sin(a+.45)*13);c.fill();
+}
+
+const A={};
+
+/* 1. Membrana plasmatică: mozaic fluid */
+A.memb={dur:15,caps:[
+ [0,'Membrana are două straturi de fosfolipide. Capetele polarizate (cu fosfor, hidrofile) stau spre apă: spre exterior și spre citoplasmă.'],
+ [3,'Cozile nepolarizate (acizi grași, hidrofobe) stau la mijloc, ferite de apă. Rezultă structura „sandwich”.'],
+ [6,'Proteinele globulare „plutesc” printre lipide și se deplasează lateral: de aici numele de mozaic fluid.'],
+ [9,'Colesterolul stă printre cozi: stabilizează lipidele și reduce fluiditatea membranei.'],
+ [12,'Glicoproteinele de pe fața externă sunt receptori: un hormon se leagă de ele.']],
+ draw(c,t){
+  stage(c);const y0=172,gap=64,ph=Math.floor(t/3);
+  c.fillStyle='rgba(90,170,230,.10)';c.fillRect(0,0,CW,y0-12);
+  c.fillStyle='rgba(240,180,110,.08)';c.fillRect(0,y0+gap+12,CW,CH);
+  lbl(c,'Exterior',16,26,{size:17,col:'#9fc6dc'});lbl(c,'Citoplasmă',16,CH-22,{size:17,col:'#e8c79c'});
+  const P=[{x:205+Math.sin(t*.5)*80,rx:30,ry:58},{x:465+Math.sin(t*.42+2)*70,rx:26,ry:50}];
+  const inP=x=>P.some(p=>Math.abs(x-p.x)<p.rx+8);
+  const dim=.3,aH=ph===0?1:ph===1?dim:.75,aT=ph===1?1:ph===0?.45:.6;
+  memH(c,y0,gap,t,inP,aH,aT);
+  const aC=ph===3?1:.35;
+  [3,9,16,23].forEach((k,j)=>{const x=12+22*k+11+Math.sin(t*1.7+k*.8)*1.6;if(inP(x))return;
+    c.globalAlpha=aC;c.fillStyle='#ffb347';
+    for(const yy of[y0+10,y0+gap-36]){c.beginPath();c.roundRect(x-3.5,yy,7,26,3.5);c.fill();}c.globalAlpha=1;});
+  const aP=ph===2?1:.55;
+  P.forEach(p=>blob(c,p.x,y0+gap/2,p.rx,p.ry,'#c3b5ff','#5b45c2',aP));
+  if(ph===2)P.forEach(p=>{arrow(c,p.x-14,y0+gap/2+p.ry+16,p.x-52,y0+gap/2+p.ry+16,'#c3b5ff',2.5);arrow(c,p.x+14,y0+gap/2+p.ry+16,p.x+52,y0+gap/2+p.ry+16,'#c3b5ff',2.5);});
+  const gx=P[0].x,gy=y0+gap/2-P[0].ry,aG=ph===4?1:.45;
+  const br=[[0,-14],[0,-30],[-12,-44],[12,-44],[-20,-58],[20,-58]];
+  c.globalAlpha=aG;c.strokeStyle='#5fd08a';c.lineWidth=2;
+  c.beginPath();c.moveTo(gx,gy);c.lineTo(gx,gy-30);c.lineTo(gx-20,gy-58);c.moveTo(gx,gy-30);c.lineTo(gx+20,gy-58);c.stroke();c.globalAlpha=1;
+  br.forEach(([dx,dy])=>ball(c,gx+dx,gy+dy,6,'#b9f5c9','#2f9e55',aG));
+  if(ph===4){const k=seg(t,12.2,14.2),hx=lerp(gx+170,gx,k),hy=lerp(40,gy-76,k);
+    c.fillStyle='#ffd93b';c.beginPath();c.moveTo(hx,hy-12);c.lineTo(hx+12,hy);c.lineTo(hx,hy+12);c.lineTo(hx-12,hy);c.fill();
+    lbl(c,'hormon',hx+18,hy,{size:16,col:'#ffe98a'});}
+  const names=['capete hidrofile','cozi hidrofobe','proteine: mozaic fluid','colesterol','glicoproteină = receptor'];
+  lbl(c,names[ph],CW/2,318,{size:22,align:'center'});
+ }};
+
+/* 2. Difuziune simplă și facilitată */
+A.dif={dur:12,caps:[
+ [0,'Difuziune: moleculele de O₂ trec direct prin stratul dublu de fosfolipide, de la concentrație mare la concentrație mică (din alveole în hematii). Fără ATP.'],
+ [6,'Difuziune facilitată: glucoza trece tot de la concentrație mare la mică, dar numai prin proteine transportoare (glucoza în hematii). Fără ATP.']],
+ draw(c,t){
+  stage(c);const mode=t<6?0:1,u=t%6,xm=296,gap=48,cy=236;
+  c.fillStyle='rgba(255,255,255,.035)';c.fillRect(0,40,xm-12,CH);
+  memV(c,xm,gap,t,mode?y=>Math.abs(y-cy)<46:null);
+  if(mode){c.fillStyle='#5b45c2';c.beginPath();c.roundRect(xm-14,cy-48,gap+28,96,18);c.fill();
+    c.fillStyle='#2a1d6b';c.fillRect(xm-14,cy-13,gap+28,26);
+    lbl(c,'proteină transportoare',xm+gap+22,cy-64,{size:16,col:'#c9bdff'});}
+  const N=18,P=pts(N,mode?91:37,30,xm-30,70,CH-20),T=pts(N,mode?57:83,xm+gap+34,CW-24,70,CH-20);
+  let moved=0;
+  P.forEach((p,i)=>{
+    const k=i%2===0?cl((u-.5-i*.25)/1.4):0;if(k>=1)moved++;
+    let x,y;const my=mode?cy:lerp(p.y,T[i].y,.5),mx=xm+gap/2;
+    if(k<=0){x=p.x+Math.sin(u*2.3+p.p)*6;y=p.y+Math.cos(u*2+p.p)*6;}
+    else if(k<.5){const q=ease(k*2);x=lerp(p.x,mx,q);y=lerp(p.y,my,q);}
+    else{const q=ease((k-.5)*2);x=lerp(mx,T[i].x,q)+Math.sin(u*2.3+p.p)*6*q;y=lerp(my,T[i].y,q)+Math.cos(u*2+p.p)*6*q;}
+    if(mode){c.fillStyle='#ffd23f';c.beginPath();for(let a=0;a<6;a++)c.lineTo(x+Math.cos(a*TAU/6)*10,y+Math.sin(a*TAU/6)*10);c.fill();}
+    else{ball(c,x-5,y,7,'#ffb3b3','#d93a3a');ball(c,x+5,y,7,'#ffb3b3','#d93a3a');}
+  });
+  lbl(c,mode?'Difuziune facilitată: glucoză':'Difuziune: O₂',CW/2,24,{size:22,align:'center'});
+  lbl(c,`concentrație mare: ${N-moved}`,20,CH-18,{size:16,col:'#ffd9a0'});
+  lbl(c,`mică: ${moved}`,CW-20,CH-18,{size:16,col:'#9fd7ff',align:'right'});
+  arrow(c,120,58,200,58,'rgba(255,255,255,.55)',2.5);arrow(c,440,58,520,58,'rgba(255,255,255,.55)',2.5);
+ }};
+
+/* 3. Osmoza: hematia în trei soluții */
+A.osm={dur:15,caps:[
+ [0,'Soluție izotonă (1% sare, la fel ca citoplasma): apa intră și iese în egală măsură, celula rămâne normală.'],
+ [5,'Soluție hipertonă (5% sare): apa iese din celulă spre soluția mai sărată, iar hematia se micșorează (se zbârcește).'],
+ [10,'Soluție hipotonă (0,3% sare, aproape apă pură): apa intră în celulă, hematia se umflă și se lizează (explodează).']],
+ draw(c,t){
+  const ph=Math.floor(t/5),u=t%5;
+  stage(c,['rgba(120,200,255,.05)','rgba(255,210,120,.07)','rgba(120,170,255,.10)'][ph]);
+  const salt=pts([34,90,10][ph],[11,23,47][ph],10,CW-10,48,CH-10);
+  c.fillStyle='rgba(255,255,255,.55)';salt.forEach(s=>{c.beginPath();c.arc(s.x+Math.sin(t+s.p)*3,s.y+Math.cos(t*.8+s.p)*3,2.6,0,TAU);c.fill();});
+  const cx=CW/2,cy=225;
+  let sc=1,cren=0,rnd=0,burst=0;
+  if(ph===1){const k=seg(u,.6,3.8);sc=lerp(1,.74,k);cren=lerp(0,.13,k);}
+  if(ph===2){const k=seg(u,.6,3.4);sc=lerp(1,1.32,k);rnd=k;burst=cl((u-3.6)/1.2);}
+  const rx=112*sc,ry=lerp(76,108,rnd)*sc;
+  const N=16;
+  for(let i=0;i<N;i++){
+    const inward=ph===2||(ph===0&&i%2===0);if(ph===2&&burst>0)break;
+    const q=(u*.55+i/N)%1,a=i/N*TAU+.2,f=inward?lerp(1.75,1.02,q):lerp(1.02,1.75,q);
+    const x=cx+Math.cos(a)*rx*f,y=cy+Math.sin(a)*ry*f,al=Math.sin(q*Math.PI);
+    c.globalAlpha=al;c.fillStyle='#62c6ff';c.beginPath();c.arc(x,y,5,0,TAU);c.fill();c.globalAlpha=1;
+  }
+  if(burst<=0){
+    c.beginPath();for(let s=0;s<=96;s++){const a=s/96*TAU,r=1+cren*Math.sin(a*10+t*.6);c.lineTo(cx+Math.cos(a)*rx*r,cy+Math.sin(a)*ry*r);}
+    const g=c.createRadialGradient(cx-rx*.3,cy-ry*.35,6,cx,cy,Math.max(rx,ry));g.addColorStop(0,'#ff8a8a');g.addColorStop(1,'#a3122a');
+    c.fillStyle=g;c.fill();c.strokeStyle='rgba(255,200,200,.5)';c.lineWidth=2;c.stroke();
+    c.globalAlpha=lerp(.5,0,rnd);c.fillStyle='#ffc4c4';c.beginPath();c.ellipse(cx,cy,rx*.42,ry*.36,0,0,TAU);c.fill();c.globalAlpha=1;
+  }else{
+    for(let i=0;i<14;i++){const a=i/14*TAU,d=lerp(rx*.8,rx*1.8,burst);c.globalAlpha=1-burst*.8;
+      c.fillStyle='#c22a3c';c.beginPath();c.ellipse(cx+Math.cos(a)*d,cy+Math.sin(a)*d*.8,16*(1-burst*.4),7,a,0,TAU);c.fill();}
+    c.globalAlpha=1;lbl(c,'liză',cx,cy,{size:30,align:'center',col:'#ffd0d0'});
+  }
+  lbl(c,['Izotonă: 1% sare','Hipertonă: 5% sare','Hipotonă: 0,3% sare'][ph],CW/2,26,{size:22,align:'center'});
+  lbl(c,['celula rămâne normală','apa iese, celula se zbârcește','apa intră, celula se umflă'][ph],CW/2,CH-22,{size:18,align:'center',col:'#cfe6f3'});
+  c.fillStyle='#62c6ff';c.beginPath();c.arc(22,CH-58,5,0,TAU);c.fill();lbl(c,'apă',34,CH-58,{size:15,col:'#9fd7ff'});
+ }};
+
+/* 4. Transport activ: pompa Na–K */
+A.pump={dur:9,caps:[
+ [0,'Transport activ: pompa de Na–K din neuron mută ionii împotriva gradientului de concentrație, de la concentrație mică la concentrație mare.'],
+ [2,'Energia vine din ATP. Fără ATP pompa nu funcționează.'],
+ [3.2,'Pompa scoate din celulă 3 ioni de sodiu (Na⁺)…'],
+ [5.2,'…și introduce 2 ioni de potasiu (K⁺). (Cifrele 3 și 2: din corectura întrebării 105.)']],
+ draw(c,t){
+  stage(c);const y0=170,gap=62,px=CW/2,py=y0+gap/2;
+  c.fillStyle='rgba(90,170,230,.09)';c.fillRect(0,0,CW,y0-12);c.fillStyle='rgba(240,180,110,.07)';c.fillRect(0,y0+gap+12,CW,CH);
+  memH(c,y0,gap,t,x=>Math.abs(x-px)<52);
+  const big=SC>.8;
+  const ion=(x,y,na,a=1)=>{ball(c,x,y,na?11:13,na?'#ffd29a':'#b6f2c8',na?'#e07b12':'#23934c',a);
+    if(big){c.globalAlpha=a;c.font='700 11px Inter,sans-serif';c.textAlign='center';c.textBaseline='middle';c.fillStyle='#10202a';c.fillText(na?'Na':'K',x,y+.5);c.globalAlpha=1;}};
+  pts(9,5,20,CW-20,58,y0-30).forEach((p,i)=>ion(p.x+Math.sin(t+p.p)*4,p.y+Math.cos(t*.9+p.p)*4,true));
+  pts(3,8,20,CW-20,62,y0-40).forEach(p=>ion(p.x+Math.sin(t+p.p)*4,p.y,false));
+  pts(9,13,20,CW-20,y0+gap+36,CH-52).forEach(p=>ion(p.x+Math.sin(t+p.p)*4,p.y+Math.cos(t*.9+p.p)*4,false));
+  pts(3,17,20,CW-20,y0+gap+36,CH-56).forEach(p=>ion(p.x+Math.sin(t+p.p)*4,p.y,true));
+  const up=seg(t,3.2,4.4)*(1-seg(t,4.8,5.4)),down=seg(t,6.4,7.4)*(1-seg(t,7.8,8.6));
+  c.fillStyle='#5b45c2';c.beginPath();c.roundRect(px-44,py-64-up*18,88,128+up*18+down*18,22);c.fill();
+  c.fillStyle='#2a1d6b';c.beginPath();c.roundRect(px-20,py-40-up*30,40,80+up*30+down*30,12);c.fill();
+  const naS=[[-12,-14],[12,-14],[0,8]],naIn=[[200,330],[250,355],[160,360]];
+  naS.forEach(([dx,dy],i)=>{
+    const k1=seg(t,.3+i*.25,1.9),k2=seg(t,3.3,4.6),fade=1-seg(t,5,5.6);
+    const x=lerp(lerp(naIn[i][0],px+dx,k1),px+dx*2.4,k2),y=lerp(lerp(naIn[i][1],py+dy,k1),y0-60-i*16,k2);
+    if(t<5.6)ion(x,y,true,fade);
+  });
+  const kOut=[[420,70],[470,96]],kS=[[-10,0],[10,0]];
+  kS.forEach(([dx,dy],i)=>{
+    const k1=seg(t,4.9+i*.2,6.2),k2=seg(t,6.5,7.7),fade=1-seg(t,8,8.6);
+    const x=lerp(lerp(kOut[i][0],px+dx,k1),px+dx*3,k2),y=lerp(lerp(kOut[i][1],py+dy,k1),y0+gap+70+i*14,k2);
+    if(t>4.6&&t<8.6)ion(x,y,false,fade);
+  });
+  if(t>1.8&&t<3.6){const k=seg(t,1.8,2.9),ax=lerp(110,px-40,k),ay=lerp(CH-40,py+40,k),fl=cl((t-2.9)/.6);
+    c.globalAlpha=1-fl;c.fillStyle='#ffe14d';c.beginPath();for(let a=0;a<10;a++){const r=a%2?9:20;c.lineTo(ax+Math.cos(a*TAU/10)*r,ay+Math.sin(a*TAU/10)*r);}c.fill();c.globalAlpha=1;
+    lbl(c,'ATP',ax+24,ay,{size:18,col:'#ffe98a'});
+    if(fl>0){c.globalAlpha=1-fl;c.strokeStyle='#ffe14d';c.lineWidth=4;c.beginPath();c.arc(px,py,50+fl*40,0,TAU);c.stroke();c.globalAlpha=1;}}
+  lbl(c,'Exterior: mult Na⁺',16,24,{size:17,col:'#ffd29a'});lbl(c,'Interior (neuron): mult K⁺',16,CH-20,{size:17,col:'#b6f2c8'});
+  lbl(c,t<3.2?'împotriva gradientului':t<5.2?'3 Na⁺ ies':'2 K⁺ intră',CW-16,24,{size:20,align:'right'});
+ }};
+
+/* 5. Endocitoză (fagocitoză) și exocitoză */
+A.vez={dur:14,caps:[
+ [0,'Endocitoză, forma fagocitoză: o porțiune din membrană se pliază în jurul unei particule solide (de exemplu un microb)…'],
+ [3,'…și o închide într-o veziculă. Așa îndepărtează globulele albe microbii din sânge.'],
+ [4.8,'Lizozomul fuzionează cu vezicula, iar enzimele lui digeră particula (digestie intracelulară).'],
+ [7,'Exocitoză: o veziculă cu substanțe (hormoni, neurotransmițători, mucus) migrează spre membrană…'],
+ [10,'…fuzionează cu ea, se rupe și își împrăștie conținutul în mediul extern.']],
+ draw(c,t){
+  stage(c);const yb=150,px=CW/2;
+  c.fillStyle='rgba(240,180,110,.08)';c.fillRect(0,yb,CW,CH);
+  lbl(c,'Exterior',16,24,{size:17,col:'#9fc6dc'});lbl(c,'Citoplasmă',16,CH-20,{size:17,col:'#e8c79c'});
+  const endo=t<7,u=endo?t:t-7;
+  let dip=0,open=0;
+  if(endo){dip=seg(u,.8,2.9)*(1-seg(u,2.9,3.1));}else{open=seg(u,2.6,3.6)*(1-seg(u,5.4,6.8));}
+  c.lineWidth=14;c.strokeStyle='#d9536f';c.lineCap='round';
+  const mem=x=>{const d=x-px;return yb+dip*118*Math.exp(-(d*d)/(2*48*48))-open*26*Math.exp(-(d*d)/(2*30*30));};
+  const hole=open>.35?(open-.35)*60:0;
+  c.beginPath();let pen=false;
+  for(let x=0;x<=CW;x+=4){if(Math.abs(x-px)<hole){pen=false;continue;}const y=mem(x);pen?c.lineTo(x,y):c.moveTo(x,y);pen=true;}
+  c.stroke();c.lineWidth=5;c.strokeStyle='#ffd0dc';c.stroke();
+  if(endo){
+    const sink=seg(u,.2,2.8),closed=u>2.9,ex=px,ey=closed?lerp(yb+90,270,seg(u,3,4.4)):lerp(40,yb+88,sink);
+    const dig=seg(u,5.4,6.8);
+    if(closed){c.strokeStyle='#d9536f';c.lineWidth=6;c.beginPath();c.arc(ex,ey,42,0,TAU);c.stroke();}
+    c.save();c.translate(ex,ey);c.rotate(.5);c.globalAlpha=1-dig;c.fillStyle='#b98a3e';c.beginPath();c.roundRect(-26,-11,52,22,11);c.fill();
+    c.fillStyle='#7a5520';[-12,0,12].forEach(d=>{c.beginPath();c.arc(d,0,3,0,TAU);c.fill();});c.restore();c.globalAlpha=1;
+    if(u>3.6){const k=seg(u,3.8,5.2),lx=lerp(110,ex-30,k),ly=lerp(340,ey+20,k);
+      ball(c,lx,ly,20*(1-dig*.3),'#e6c9ff','#7b3fc2');if(u<5.4)lbl(c,'lizozom',lx-26,ly+34,{size:16,col:'#e6c9ff'});
+      if(dig>0)lbl(c,'digestie',ex+52,ey,{size:18,col:'#e6c9ff'});}
+    if(!closed)lbl(c,'microb',ex+36,Math.min(ey,yb-20)-10,{size:16,col:'#f0d7a8'});
+    lbl(c,u<4.8?'Fagocitoză':'Lizozomul digeră',CW-16,24,{size:20,align:'right'});
+  }else{
+    const rise=seg(u,.3,2.8),vx=px,vy=lerp(330,yb+30,rise),fused=open>.35;
+    const dots=pts(12,29,-26,26,-26,26);
+    if(!fused){c.strokeStyle='#d9536f';c.lineWidth=6;c.beginPath();c.arc(vx,vy,38,0,TAU);c.stroke();}
+    const spread=seg(u,3.2,6.2);
+    dots.forEach((d,i)=>{const a=Math.atan2(d.y,d.x)-Math.PI/2*0+(i%2?.2:-.2);
+      const x=vx+d.x*(1+spread*3)+Math.sin(t*2+d.p)*3,y=vy+d.y-spread*(150+(i%5)*18);
+      ball(c,x,y,6,'#c6ffd6','#2fa45a',1-seg(u,6.2,6.9));});
+    if(!fused)lbl(c,'veziculă',vx+50,Math.max(vy,yb+40),{size:16,col:'#ffd0dc'});
+    lbl(c,'Exocitoză',CW-16,24,{size:20,align:'right'});
+  }
+ }};
+
+/* 6. Cili și flagel */
+A.cil={dur:6,caps:[
+ [0,'Cilii (scurți și numeroși) bat ritmic și mută mucusul în căile respiratorii superioare.'],
+ [3,'Flagelul (lung, unul singur) mișcă spermatozoidul. Atât cilii, cât și flagelii pornesc din corpusculi bazali.']],
+ draw(c,t){
+  stage(c);const yb=172;
+  c.fillStyle='#3b6b5a';c.beginPath();c.roundRect(-10,yb,CW+20,34,6);c.fill();
+  for(let x=0;x<CW;x+=80){c.strokeStyle='rgba(0,0,0,.25)';c.lineWidth=2;c.beginPath();c.moveTo(x,yb);c.lineTo(x,yb+34);c.stroke();}
+  c.fillStyle='rgba(200,230,140,.25)';c.beginPath();c.moveTo(0,70);for(let x=0;x<=CW;x+=20)c.lineTo(x,74+Math.sin(x*.03-t*2)*6);c.lineTo(CW,100);c.lineTo(0,100);c.fill();
+  pts(14,3,0,CW,74,96).forEach(p=>{const x=(p.x+t*60)%CW;ball(c,x,p.y,4,'#f2ffd0','#9bbf4a');});
+  for(let x=10;x<CW;x+=14){const ph=t*TAU/1.2-x*.045,a=Math.sin(ph)*.6;
+    c.strokeStyle='#9fe3c4';c.lineWidth=3;c.lineCap='round';c.beginPath();c.moveTo(x,yb);
+    c.quadraticCurveTo(x+Math.sin(a)*30,yb-40,x+Math.sin(a)*58,yb-62-Math.cos(a)*6);c.stroke();}
+  lbl(c,'cili → mută mucusul',16,30,{size:18});
+  arrow(c,CW-150,40,CW-40,40,'#dff5a8',3);
+  const sx=((t/6)*(CW+260))-130,sy=320;
+  c.strokeStyle='#ffd0dc';c.lineWidth=3;c.beginPath();
+  for(let s=0;s<=60;s++){const x=sx-26-s*3.4,y=sy+Math.sin(s*.22-t*12)*(4+s*.32);s?c.lineTo(x,y):c.moveTo(x,y);}c.stroke();
+  blob(c,sx,sy,26,17,'#fff0f4','#d97a96');
+  lbl(c,'flagel → mișcă spermatozoidul',16,CH-22,{size:18});
+ }};
+
+/* 7. ADN → nucleozom → cromozom */
+A.crom={dur:12,caps:[
+ [0,'ADN-ul este o moleculă lungă, în dublu fir.'],
+ [3,'ADN-ul se înfășoară pe proteine numite histone. ADN + histone = cromatină; o unitate înfășurată = nucleozom.'],
+ [7,'Mai mulți nucleozomi strânși împreună formează un cromozom.'],
+ [9.5,'Genele sunt segmentele funcționale ale cromozomilor (în nucleul uman: aproximativ 30.000 de gene).']],
+ draw(c,t){
+  stage(c);
+  const N=9,wrap=seg(t,3,5.5),cond=seg(t,7,9),gene=seg(t,9.5,10.5);
+  const beads=Array.from({length:N},(_,i)=>({x:70+i*62,y:210+Math.sin(i*.9)*16}));
+  const X=(i)=>{const side=i<4?-1:i>4?1:0,arm=i<4?i:i>4?i-5:0,j=Math.abs(arm-1.5);
+    if(i===4)return{x:CW/2,y:210};const up=i%2===0?-1:1;return{x:CW/2+side*(20+j*6),y:210+up*(34+arm*22)};};
+  const pos=beads.map((b,i)=>{const x2=X(i);return{x:lerp(b.x,x2.x,cond),y:lerp(b.y,x2.y,cond)};});
+  if(cond>.05){c.globalAlpha=cond;c.lineCap='round';
+    for(const s of[-1,1]){const g=c.createLinearGradient(0,90,0,330);g.addColorStop(0,'#7d6bd9');g.addColorStop(1,'#4b3aa8');c.strokeStyle=g;c.lineWidth=46;
+      c.beginPath();c.moveTo(CW/2+s*50,96);c.quadraticCurveTo(CW/2-s*34,210,CW/2+s*50,324);c.stroke();}
+    if(gene>0){c.strokeStyle='#ffd23f';c.globalAlpha=gene;c.lineWidth=46;c.lineCap='butt';c.beginPath();c.moveTo(CW/2+21,140);c.lineTo(CW/2+18,162);c.stroke();
+      c.globalAlpha=1;arrow(c,CW/2+150,140,CW/2+58,160,'#ffd23f',3);lbl(c,'genă',CW/2+158,140,{size:20,col:'#ffe98a'});}
+    c.globalAlpha=1;}
+  const fA=1-cond;
+  if(fA>0){
+    for(const s of[0,Math.PI]){c.strokeStyle=s?'#62c6ff':'#ff9fb2';c.lineWidth=3;c.globalAlpha=fA;c.beginPath();
+      for(let x=20;x<=CW-20;x+=4){const near=beads.reduce((m,b)=>Math.min(m,Math.abs(x-b.x)),99);
+        const w=wrap*cl(1-near/30),by=210+Math.sin((x-70)/62*.9)*16*wrap;
+        const y=lerp(210+Math.sin(x*.06-t*1.5+s)*9,by+Math.sin(x*.25+s)*(9+w*20),wrap);x===20?c.moveTo(x,y):c.lineTo(x,y);}
+      c.stroke();}
+    beads.forEach((b,i)=>{if(wrap>0)ball(c,pos[i].x,pos[i].y,lerp(0,17,wrap),'#e6c9ff','#7b3fc2',fA);});
+    c.globalAlpha=1;
+  }
+  lbl(c,t<3?'ADN':t<7?'nucleozomi (ADN + histone)':'cromozom',CW/2,36,{size:22,align:'center'});
+  if(t>=3.6&&t<7){arrow(c,beads[2].x+40,300,beads[2].x+4,234,'#e6c9ff',2.5);lbl(c,'histonă',beads[2].x+44,308,{size:17,col:'#e6c9ff'});}
+ }};
+
+function player(fig){
+  const def=A[fig.dataset.a];if(!def)return;
+  const cv=fig.querySelector('canvas'),cap=fig.querySelector('.acap'),pp=fig.querySelector('.pp'),bar=fig.querySelector('.abar i'),ctx=cv.getContext('2d');
+  const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let t=0,playing=!rm,vis=false,last=0,raf=0,lc=-1,cssW=0;
+  function size(){const r=cv.getBoundingClientRect();if(!r.width)return;cssW=r.width;const d=Math.min(2,window.devicePixelRatio||1);
+    cv.width=Math.round(r.width*d);cv.height=Math.round(r.width*CH/CW*d);render();}
+  function render(){if(!cssW)return;SC=cssW/CW;const s=cv.width/CW;ctx.setTransform(s,0,0,s,0,0);ctx.clearRect(0,0,CW,CH);
+    try{def.draw(ctx,t);}catch(e){console.error('anim',fig.dataset.a,e);}
+    let ci=0;def.caps.forEach((cp,i)=>{if(t>=cp[0])ci=i;});if(ci!==lc){lc=ci;cap.textContent=def.caps[ci][1];}
+    bar.style.width=(t/def.dur*100)+'%';}
+  function loop(now){raf=0;const dt=last?Math.min(.05,(now-last)/1000):0;last=now;t=(t+dt)%def.dur;render();
+    if(playing&&vis)raf=requestAnimationFrame(loop);else last=0;}
+  function kick(){if(playing&&vis&&!raf){last=0;raf=requestAnimationFrame(loop);}}
+  function setBtn(){pp.setAttribute('aria-label',playing?'Pauză':'Pornește');pp.innerHTML=playing?'<svg viewBox="0 0 24 24" width="20" height="20"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/></svg>':'<svg viewBox="0 0 24 24" width="20" height="20"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>';}
+  pp.addEventListener('click',()=>{playing=!playing;setBtn();kick();});
+  fig.querySelector('.rs').addEventListener('click',()=>{t=0;lc=-1;render();kick();});
+  fig.querySelector('.abar').addEventListener('click',e=>{const r=e.currentTarget.getBoundingClientRect();t=cl((e.clientX-r.left)/r.width)*def.dur*.999;lc=-1;render();});
+  if(rm)t=def.dur*.3;
+  setBtn();
+  const ro=new ResizeObserver(size);ro.observe(cv);
+  const io=new IntersectionObserver(es=>{vis=es[0].isIntersecting;if(vis){if(!cssW)size();kick();}});io.observe(fig);
+}
+document.querySelectorAll('figure.anim').forEach(player);
+}
+</script></body></html>
